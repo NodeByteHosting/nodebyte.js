@@ -1,0 +1,11 @@
+{
+    "extension": [
+        "ts"
+    ],
+    "require": [
+        "ts-node/register",
+        "tsconfig-paths/register"
+    ],
+    "spec": "packages/**/tests/**/*.spec.ts",
+    "timeout": 10000
+}

@@ -4,17 +4,16 @@
     "version": "0.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "type": "module",
     "directories": {
         "src": "src",
-        "tests": "tests"
+        "test": "tests"
     },
     "files": [
         "dist/**/*"
     ],
     "scripts": {
         "build": "tsc",
-        "test": "mocha --require esm 'tests/**/*.spec.mjs'"
+        "test": "mocha"
     },
     "dependencies": {
         "chalk": "^5.3.0",
@@ -25,15 +24,12 @@
         "@babel/register": "^7.25.9",
         "@babel/preset-env": "^7.26.0",
         "@types/chai": "^5.0.1",
-        "@types/mocha": "^10.0.9",
+        "@types/expect": "^24.3.2",
         "@types/debug": "^4.1.12",
+        "@types/mocha": "^10.0.9",
         "@types/node": "^22.10.1",
-        "chai": "^5.1.2",
-        "esm": "^3.2.25",
-        "mocha": "^10.8.2",
         "ora": "^8.1.1",
-        "typescript": "^5.7.2",
-        "tsconfig-paths": "^4.2.0",
-        "ts-node": "^10.9.2"
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7.2"
     }
 }

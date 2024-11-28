@@ -1,9 +1,10 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
+        "rootDir": ".",
         "outDir": "dist",
-        "rootDir": "."
+        "module": "commonjs"
     },
-    "include": ["src/**/*.ts", "tests/**/*.ts", "tests/logger.spec.mjs"],
+    "include": ["src/**/*.ts", "tests/**/*.ts"],
     "exclude": ["node_modules", "dist"]
 }
