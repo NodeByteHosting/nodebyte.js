@@ -1,0 +1,28 @@
+{
+    "version": "0.0.0",
+    "packages": [
+        "packages/*"
+    ],
+    "npmClient": "bun",
+    "command": {
+        "publish": {
+            "registry": "https://registry.npmjs.org/",
+            "npmClient": "npm",
+            "noGitReset": true,
+            "allowBranch": "master"
+        },
+        "version": {
+            "message": "chore(release): publish %s",
+            "forcePublish": [
+                "*"
+            ],
+            "noPush": true
+        },
+        "bootstrap": {
+            "logLevel": "info",
+            "npmClientArgs": [
+                "--no-package-lock"
+            ]
+        }
+    }
+}

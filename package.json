@@ -1,0 +1,51 @@
+{
+    "private": true,
+    "author": "Toxic Dev <https://toxicdev.me>",
+    "homepage": "https://nodebyte.host/docs",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NodeByteHosting/nodebyte.js.git"
+    },
+    "bugs": {
+        "url": "https://github.com/NodeByteHosting/nodebyte.js/issues"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "build": "lerna run build",
+        "clean": "lerna clean",
+        "docs": "typedoc",
+        "patch": "lerna version patch --yes",
+        "prepare": "husky",
+        "prerelease": "lerna publish prerelease --yes --access public",
+        "publish": "lerna publish from-package --yes --access public",
+        "test": "lerna run test",
+        "version": "lerna version"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.6.0",
+        "@commitlint/config-conventional": "^19.6.0",
+        "@types/node": "^22.9.0",
+        "@typescript-eslint/parser": "^8.13.0",
+        "@typescript-eslint/eslint-plugin": "^8.13.0",
+        "commitlint": "^19.6.0",
+        "eslint": "^9.14.0",
+        "husky": "^9.1.7",
+        "lerna": "^8.1.9",
+        "lint-staged": "^15.2.10",
+        "prettier": "^3.3.3",
+        "typescript": "^5.6.3",
+        "typedoc": "^0.24.0"
+    },
+    "lint-staged": {
+        "./packages/**/*.{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "./packages/**/*.{json,md,mdx}": [
+            "prettier --write"
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "hoist": true,
+    "workspaces": [
+        "packages/*"
+    ]
+}
